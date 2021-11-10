@@ -1,0 +1,84 @@
+.sectionHome{
+    
+    .sectionDivOne{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        padding: 1rem;
+
+        background-color: var(--color-purple);
+
+        .divGofinances{
+            display: flex;
+            justify-content: space-between;
+            
+            font-size: 14px;
+            
+            color: var(--color-white);
+            
+            .span1{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                
+                .iconMoedas{
+                    color: var(--color-orange);
+                }
+            }
+            .span2{
+                font-size: 14px;
+            }
+
+        }
+
+        .sectionDivOneCards{
+            margin: 0 auto;
+            width: 50%;
+
+            display: flex;
+            justify-content: space-between;
+
+            .cards{
+                .cardsL1{
+                    display: flex;
+                    justify-content: space-between;
+
+                    font-size: 13px;
+
+                    .iconEntrada{
+                        width: 15%;
+
+                        color: var(--color-green);
+                    }
+                    .iconSaida{
+                        width: 15%;
+
+                        color: var(--color-red);
+                    }
+                }
+
+                .cardsL2{
+                    font-size: 16px;
+
+                }
+            }
+            .cardOrange{
+                display: flex;
+                justify-content: space-between;
+
+                color: var(--color-white);
+                background-color: var(--color-orange);
+
+                .money{
+                    width: 15%;
+                }
+            }
+        }
+    }
+    .sectionDivTwo{
+        margin-top: 5rem;
+
+        background-color: #d3d1d1;
+    }
+}
