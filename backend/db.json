@@ -1,19 +1,28 @@
 {
-  "posts": [
+  "transacoes": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "titulo": "Desenvolvimento de site",
+      "preco": 12.000,
+      "categoria": "Venda",
+      "tipo": "deposito",
+      "data": "2021-11-12T17:10:49.082Z"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "titulo": "Hamburguer",
+      "preco": 59,
+      "categoria": "Alimentação",
+      "tipo": "saque",
+      "data": "2021-11-12T17:10:49.082Z"
+    },
+    {
+      "id": 3,
+      "titulo": "Casa",
+      "preco": 5400,
+      "categoria": "Venda",
+      "tipo": "saque",
+      "data": "2021-11-12T17:10:49.082Z"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

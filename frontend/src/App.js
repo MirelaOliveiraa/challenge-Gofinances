@@ -1,13 +1,16 @@
 import React from "react";
 
-import Routes from "./router/Router";
 import "./style/global.scss";
+import Routes from "./router/Router.js";
+import { TransactionProvider } from "./contexts/TransactionsContext";
 
 const App = () => {
   return (
-    <section className="App">
-      <Routes />
-    </section>
+    <TransactionProvider>
+      <section>
+        <Routes />
+      </section>
+    </TransactionProvider>
   );
 };
 
