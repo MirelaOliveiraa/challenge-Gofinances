@@ -1,12 +1,12 @@
 import React from "react";
 
-import Home from "./pages/Home";
+import Routes from "./router/Router";
 import "./style/global.scss";
 
 const App = () => {
   return (
     <section className="App">
-      <Home />
+      <Routes />
     </section>
   );
 };

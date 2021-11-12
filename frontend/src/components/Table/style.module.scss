@@ -1,0 +1,31 @@
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .sectionTable{
+        width: 70%;
+        margin: 0 auto;
+
+        text-align: left;
+        
+        background-color: var(--color-gray);
+        
+        .tableTr{
+            .tableTh{
+                padding: 0.5rem;
+
+                font-size: 13px;
+                font-weight: 400;
+
+                align-items: center;
+            }
+
+            .tableTd{
+                padding: 0.5rem;
+
+                background-color: var(--color-white);
+            }
+        }
+    }
+}

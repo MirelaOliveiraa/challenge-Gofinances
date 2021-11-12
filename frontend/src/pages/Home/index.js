@@ -1,7 +1,9 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 import style from "./style.module.scss";
 import Cards from "../../components/Cards";
+import Table from "../../components/Table";
 
 import ArrowUpwardOutlinedIcon from "@material-ui/icons/ArrowUpwardOutlined";
 import AttachMoneyOutlinedIcon from "@material-ui/icons/AttachMoneyOutlined";
@@ -9,6 +11,12 @@ import ArrowDownwardOutlinedIcon from "@material-ui/icons/ArrowDownwardOutlined"
 import MonetizationOnOutlinedIcon from "@material-ui/icons/MonetizationOnOutlined";
 
 const Home = () => {
+  const history = useHistory();
+
+  const importarConta = () => {
+    history.push("/listagem");
+  };
+
   return (
     <section className={style.sectionHome}>
       <div className={style.sectionDivOne}>
@@ -17,7 +25,13 @@ const Home = () => {
             <MonetizationOnOutlinedIcon className={style.iconMoedas} />{" "}
             gofinances
           </div>
-          <div className={style.span2}> entrada listagem</div>
+          <div>
+            <button className={style.span2} onClick={importarConta}>
+              {" "}
+              listagem
+            </button>
+            <div>importar</div>
+          </div>
         </div>
         <div className={style.sectionDivOneCards}>
           <Cards>
@@ -50,7 +64,7 @@ const Home = () => {
         </div>
       </div>
       <div className={style.sectionDivTwo}>
-        <h1>oioi</h1>
+        <Table />
       </div>
     </section>
   );
