@@ -1,0 +1,112 @@
+.section{
+    width: 100%;
+    height: 100vh;
+
+    .sectionCabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: var(--color-white);
+    
+    .GoFinances{
+        width: 20%;
+        
+        display: flex;
+        align-items: center;    
+        justify-content: center;
+        
+        .iconMoney{
+            color: var(--color-orange);
+        }
+    }
+
+    .iconHome{
+        width: 10%;
+    }
+}
+
+.titulo{
+    margin: 2.5rem 0%;
+    text-align: center;
+
+    font-size: 25px;
+    letter-spacing: 1px;
+    
+    color: var(--color-black);
+}
+    .Card{
+        width: 40%;
+        
+        display: flex;
+        border-radius: 5px;      
+        flex-direction: column;
+        
+        padding: 5% 5rem;
+        margin: 0 auto;
+    
+        text-align: center;
+        align-items: center;
+        
+        background-color: var(--color-white);
+        
+        .Arquivo{
+            width: 100%;
+
+            .InputAddArquivos{
+                width: 100%;
+                height: 6rem;
+
+                font-size: 16px;
+                text-align: center;
+                border-radius: 5px;
+
+                border: 3px dashed var(--color-gray);
+            }
+
+            .InputAddArquivos::placeholder{
+                color: var(--color-purple);
+            }
+        }
+
+        .button{
+            width: 100%;
+
+            display: flex;
+            margin-top: 3rem;
+            justify-content: space-between;
+            
+            .divAlert{   
+                width: 80%;
+
+                display: flex;
+                align-items: center;
+                
+                h6{
+                    font-size: 12px;
+
+                    color: var(--color-black);
+                }
+                .iconProblem{
+                    width: 10%;
+
+                    color: var(--color-orange);
+                }
+            }
+
+            .buttonEnviar{
+                width: 30%;
+
+                border: none;
+                padding: 0.8rem 0%;
+                border-radius: 5px;
+
+                font-size: 15px;
+                font-weight: 500;
+                
+                color: var(--color-white);
+                background-color: var(--color-orange);
+            }
+        }
+    }
+}

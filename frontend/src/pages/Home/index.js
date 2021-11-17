@@ -5,7 +5,9 @@ import { TransactionContext } from "../../contexts/TransactionsContext";
 
 import style from "./style.module.scss";
 import Table from "../../components/Table";
+import Cabecalho from "../../components/Cabecalho";
 
+import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 import ArrowUpwardOutlinedIcon from "@material-ui/icons/ArrowUpwardOutlined";
 import AttachMoneyOutlinedIcon from "@material-ui/icons/AttachMoneyOutlined";
 import ArrowDownwardOutlinedIcon from "@material-ui/icons/ArrowDownwardOutlined";
@@ -13,6 +15,11 @@ import MonetizationOnOutlinedIcon from "@material-ui/icons/MonetizationOnOutline
 
 const Home = () => {
   const { transacoes } = useContext(TransactionContext);
+  const history = useHistory();
+
+  const Importar = () => {
+    history.push("/importacao");
+  };
 
   const summary = transacoes.reduce(
     (acc, transacao) => {
@@ -35,15 +42,17 @@ const Home = () => {
 
   return (
     <section className={style.sectionHome}>
-      <div className={style.sectionDivOne}>
+      <Cabecalho>
         <div className={style.divGofinances}>
           <div className={style.span1}>
-            <MonetizationOnOutlinedIcon className={style.iconMoedas} />{" "}
+            <MonetizationOnOutlinedIcon className={style.iconMoedas} />
             gofinances
           </div>
           <div>
-            <div>listagem</div>
-            <div>importar</div>
+            <ArrowUpwardIcon
+              className={style.buttonImportar}
+              onClick={Importar}
+            />
           </div>
         </div>
         <div className={style.sectionDivOneCards}>
@@ -86,7 +95,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Cabecalho>
+
       <div className={style.sectionDivTwo}>
         <Table />
       </div>

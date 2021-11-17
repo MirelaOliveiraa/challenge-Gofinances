@@ -1,13 +1,4 @@
 .sectionHome{
-    
-    .sectionDivOne{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        padding: 1rem;
-
-        background-color: var(--color-purple);
 
         .divGofinances{
             display: flex;
@@ -26,87 +17,95 @@
                     color: var(--color-orange);
                 }
             }
-            .span2{
-                font-size: 14px;
+            .buttonImportar{
+                
+                border: none;
+                padding: 0.2rem;
+                border-radius: 5px;
+
+                font-weight: 600;
+                font-size: 18px;
+
+                color: var(--color-darkpurple);
+                background-color: var(--color-white);
             }
-
+            
         }
-
+        
         .sectionDivOneCards{
             margin: 0 auto;
             width: 50%;
-
+            
             display: flex;
             justify-content: space-between;
 
             .cards{
                 padding: 0.5rem 5%;
                 border-radius: 5px;
-
+                
                 background-color: var(--color-white);
-
+                
                 .cardsL1{
                     display: flex;
                     justify-content: space-between;
-
+                    
                     font-size: 13px;
-
+                    
                     .iconEntrada{
                         width: 15%;
-
+                        
                         color: var(--color-green);
                     }
                     .iconSaida{
                         width: 15%;
-
+                        
                         color: var(--color-red);
                     }
                 }
-
+                
                 .cardsL2{
                     font-size: 16px;
-
+                    
                 }
             }
             .cardOrange{
                 padding: 0.5rem 5%;
-
+                
                 border-radius: 5px;
 
                 color: var(--color-white);
                 background-color: var(--color-orange);
-
+                
                 .money{
                     width: 15%;
                 }
                 .cardsL1{
                     display: flex;
                     justify-content: space-between;
-
+                    
                     font-size: 13px;
-
+                    
                     .iconEntrada{
                         width: 15%;
-
+                        
                         color: var(--color-green);
                     }
                     .iconSaida{
                         width: 15%;
-
+                        
                         color: var(--color-red);
                     }
                 }
-
+                
                 .cardsL2{
                     font-size: 16px;
-
+                    
                 }
             }
         }
-    }
+        
+    
     .sectionDivTwo{
         margin-top: 5rem;
-
-        //background-color: #d3d1d1;
     }
 }
