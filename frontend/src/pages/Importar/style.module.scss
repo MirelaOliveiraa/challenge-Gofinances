@@ -11,7 +11,7 @@
     
     .GoFinances{
         width: 20%;
-        
+
         display: flex;
         align-items: center;    
         justify-content: center;
@@ -35,7 +35,7 @@
     
     color: var(--color-black);
 }
-    .Card{
+    .divCard{
         width: 40%;
         
         display: flex;
@@ -50,7 +50,7 @@
         
         background-color: var(--color-white);
         
-        .Arquivo{
+        .divArquivo{
             width: 100%;
 
             .InputAddArquivos{
@@ -69,7 +69,7 @@
             }
         }
 
-        .button{
+        .divButtons{
             width: 100%;
 
             display: flex;
