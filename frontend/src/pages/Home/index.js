@@ -1,11 +1,9 @@
 import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 
-import { TransactionContext } from "../../contexts/TransactionsContext";
-
 import style from "./style.module.scss";
 import Table from "../../components/Table";
-import Cabecalho from "../../components/Cabecalho";
+import { TransactionContext } from "../../contexts/TransactionsContext";
 
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 import ArrowUpwardOutlinedIcon from "@material-ui/icons/ArrowUpwardOutlined";
@@ -14,8 +12,8 @@ import ArrowDownwardOutlinedIcon from "@material-ui/icons/ArrowDownwardOutlined"
 import MonetizationOnOutlinedIcon from "@material-ui/icons/MonetizationOnOutlined";
 
 const Home = () => {
-  const { transacoes } = useContext(TransactionContext);
   const history = useHistory();
+  const { transacoes } = useContext(TransactionContext);
 
   const Importar = () => {
     history.push("/importacao");
@@ -42,7 +40,7 @@ const Home = () => {
 
   return (
     <section className={style.sectionHome}>
-      <Cabecalho>
+      <div className={style.Cabecalho}>
         <div className={style.divGofinances}>
           <div className={style.span1}>
             <MonetizationOnOutlinedIcon className={style.iconMoedas} />
@@ -95,8 +93,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </Cabecalho>
-
+      </div>
       <div className={style.sectionDivTwo}>
         <Table />
       </div>

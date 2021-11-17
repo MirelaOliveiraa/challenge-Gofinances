@@ -2,16 +2,16 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    table{
-        background-color: var(--color-white);
-    }
     
     .sectionTable{
         width: 70%;
+        
         margin: 0 auto;
-
         text-align: left;
+        border-spacing: 0 0.2rem;
+        
+        color: var(--color-darkgray);
+        background-color: var(--color-gray);
         
         .tableTr{
             
@@ -19,19 +19,31 @@
                 padding: 0.5rem;
                 
                 font-size: 13px;
-                font-weight: 400;
+                font-weight: 500;
                 
-                align-items: center;
-                
+                align-items: center;        
             }
             
-            .tableTd{
+            .tableTd, .colorEntrada, .colorSaida, .colorGray{
                 padding: 0.5rem;
                 
                 font-size: 15px;
-                border-bottom: 2px solid var(--color-gray);
                 
+                background-color: var(--color-white);
+                
+            }
+
+            .colorEntrada{
+                color: var(--color-green);
+            }
+
+            .colorSaida{
+                color: var(--color-red);
+            }
+            .colorGray{
+                color: var(--color-darkgray);
             }
         }
     }
 }
+

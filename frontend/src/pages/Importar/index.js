@@ -1,15 +1,27 @@
-import React from "react";
 import { useHistory } from "react-router-dom";
+import { useDropzone } from "react-dropzone";
+import React, { useState } from "react";
 
 import style from "./style.module.scss";
-import Cabecalho from "../../components/Cabecalho";
 
 import HomeIcon from "@material-ui/icons/Home";
 import ReportProblemOutlinedIcon from "@material-ui/icons/ReportProblemOutlined";
 import MonetizationOnOutlinedIcon from "@material-ui/icons/MonetizationOnOutlined";
+import PictureInPictureAltOutlinedIcon from "@material-ui/icons/PictureInPictureAltOutlined";
 
 const Importar = () => {
   const history = useHistory();
+  const [file, setFile] = useState(null);
+
+  const onDropAccepted = (acceptedFile) => {
+    setFile(acceptedFile[0]);
+    console.log(acceptedFile);
+  };
+
+  const { getRootProps, getInputProps } = useDropzone({
+    onDropAccepted,
+    accept: ".csv",
+  });
 
   const pagInicial = () => {
     history.push("/");
@@ -17,24 +29,29 @@ const Importar = () => {
 
   return (
     <section className={style.section}>
-      <Cabecalho>
-        <div className={style.sectionCabecalho}>
-          <div className={style.GoFinances}>
-            <MonetizationOnOutlinedIcon className={style.iconMoney} />
-            gofinances
-          </div>
-          <HomeIcon className={style.iconHome} onClick={pagInicial} />
+      <div className={style.sectionCabecalho}>
+        <div className={style.GoFinances}>
+          <MonetizationOnOutlinedIcon className={style.iconMoney} />
+          gofinances
         </div>
-      </Cabecalho>
+        <HomeIcon className={style.iconHome} onClick={pagInicial} />
+      </div>
       <h3 className={style.titulo}>Importar uma transação</h3>
       <div className={style.divCard}>
-        <div className={style.divArquivo}>
+        <div {...getRootProps({ className: style.divArquivo })}>
           <input
+            {...getInputProps()}
             className={style.InputAddArquivos}
-            placeholder="Selecione ou arraste o arquivo aqui"
             type="text"
           />
+          <p>Selecione ou arraste o arquivo aqui</p>
         </div>
+        {file && (
+          <p className={style.ArquivoAdicionado}>
+            <PictureInPictureAltOutlinedIcon />
+            <span>{file.name}</span>
+          </p>
+        )}
         <div className={style.divButtons}>
           <div className={style.divAlert}>
             <ReportProblemOutlinedIcon className={style.iconProblem} />

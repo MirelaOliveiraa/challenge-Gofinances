@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { TransactionContext } from "../../contexts/TransactionsContext";
 
 import style from "./style.module.scss";
+import { TransactionContext } from "../../contexts/TransactionsContext";
 
 const Table = () => {
   const { transacoes } = useContext(TransactionContext);
@@ -21,7 +21,13 @@ const Table = () => {
           {transacoes.map((transacao) => (
             <tr key={transacao.id} className={style.tableTr}>
               <td className={style.tableTd}>{transacao.titulo}</td>
-              <td className={style.tableTd}>
+              <td
+                className={
+                  transacao.tipo == "saque"
+                    ? style.colorSaida
+                    : style.colorEntrada
+                }
+              >
                 {new Intl.NumberFormat("pt-BR", {
                   style: "currency",
                   currency: "BRL",

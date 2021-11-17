@@ -3,7 +3,7 @@
     {
       "id": 1,
       "titulo": "Desenvolvimento de site",
-      "preco": 12.000,
+      "preco": 1200.000,
       "categoria": "Venda",
       "tipo": "deposito",
       "data": "2021-11-12T17:10:49.082Z"
@@ -19,7 +19,7 @@
     {
       "id": 3,
       "titulo": "Casa",
-      "preco": 5400,
+      "preco": 400,
       "categoria": "Venda",
       "tipo": "saque",
       "data": "2021-11-12T17:10:49.082Z"
