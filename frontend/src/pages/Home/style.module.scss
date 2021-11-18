@@ -11,12 +11,14 @@
         background-color: var(--color-purple);
 
         .divGofinances{
+            width: 100%;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
 
             font-size: 16px;
-            margin-top: 3rem;
+            margin-top: 4rem;
             
             color: var(--color-white);
             
@@ -25,29 +27,31 @@
                 align-items: center;
                 justify-content: space-between;
                 
-                .iconMoedas{
+                img{
                     margin-right: 0.5rem;
- 
-                    color: var(--color-orange);
-                }
+                 }
             }
- 
-            .buttonImportar{               
-                padding: 0.2rem;
-                
-                font-weight: 600;
-                font-size: 18px;
-                
-                border: none;
-                border-radius: 5px;
 
-                color: var(--color-darkpurple);
-                background-color: var(--color-white);
+            .spanListagem, .spanImportar{
+                cursor: pointer;
+
+                padding: 0.2rem;
+                font-size: 13px;
+                font-weight: 400;
+                
+                color: var(--color-white);
+                
             }
+            
+            .spanImportar{
+                margin-right: 1rem;
+                           
+                border-bottom: solid 1px var(--color-orange);
+           }
         }
         
         .sectionDivOneCards{
-            width: 50%;
+            width: 100%;
             
             margin: 0 auto;
             display: flex;
@@ -55,9 +59,10 @@
 
             .cards{
                 height: 5rem;
+                width: 24%;
 
                 margin-top: 2rem;
-                padding: 1rem 5%;
+                padding: 1rem 4%;
                 border-radius: 5px;
                 
                 background-color: var(--color-white);
@@ -68,11 +73,12 @@
                     justify-content: space-between;
                     
                     font-size: 13px;
+
                     
                     .iconEntrada{
-                        width: 9%;
+                        width: 7%;
 
-                        padding: 0rem 3%;
+                        padding: 0rem 1.5%;
                         border-radius: 16px;
                         border: 1px var(--color-green) solid;
                         
@@ -80,9 +86,9 @@
                     }
                     
                     .iconSaida{
-                        width: 9%;
+                        width: 7%;
 
-                        padding: 0rem 3%;
+                        padding: 0rem 1.5%;
                         border-radius: 16px;
                         border: 1px var(--color-red) solid;
                         

@@ -15,22 +15,42 @@
         background-color: var(--color-purple);
     
         .GoFinances{
-            width: 20%;
+            width: 80%;
+            margin: 0 auto;
 
             display: flex;
-
             align-items: center;    
-            justify-content: center;
-        
-            .iconMoney{
-                margin-right: 0.5rem;
-                color: var(--color-orange);
+            justify-content: space-between;
+
+            .spanDireita{
+                display: flex;
+                align-items: center;    
+
+                img{
+                    margin-right: 0.5rem;
+                }
+            }
+            
+            .spanEsquerda{
+                width: 15%;
+    
+                .spanImportar, .spanListagem{
+                    cursor: pointer;
+    
+                    padding: 0.2rem;
+                    font-size: 13px;
+                    font-weight: 400;
+                    
+                    color: var(--color-white);
+                }
+                .spanImportar{
+                    margin-left: 1rem;
+                           
+                    border-bottom: solid 1px var(--color-orange);
+                }
             }
         }
 
-        .iconHome{
-            width: 10%;
-        }
     }
 
     .titulo{

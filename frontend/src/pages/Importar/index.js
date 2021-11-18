@@ -3,8 +3,8 @@ import { useDropzone } from "react-dropzone";
 import React, { useState } from "react";
 
 import style from "./style.module.scss";
+import Finance from "../../assets/Finance.svg";
 
-import HomeIcon from "@material-ui/icons/Home";
 import ReportProblemOutlinedIcon from "@material-ui/icons/ReportProblemOutlined";
 import MonetizationOnOutlinedIcon from "@material-ui/icons/MonetizationOnOutlined";
 import PictureInPictureAltOutlinedIcon from "@material-ui/icons/PictureInPictureAltOutlined";
@@ -31,10 +31,17 @@ const Importar = () => {
     <section className={style.section}>
       <div className={style.sectionCabecalho}>
         <div className={style.GoFinances}>
-          <MonetizationOnOutlinedIcon className={style.iconMoney} />
-          gofinances
+          <div className={style.spanDireita}>
+            <img src={Finance} />
+            gofinances
+          </div>
+          <div className={style.spanEsquerda}>
+            <span className={style.spanListagem} onClick={pagInicial}>
+              Listagem
+            </span>
+            <span className={style.spanImportar}>Importar</span>
+          </div>
         </div>
-        <HomeIcon className={style.iconHome} onClick={pagInicial} />
       </div>
       <h3 className={style.titulo}>Importar uma transação</h3>
       <div className={style.divCard}>

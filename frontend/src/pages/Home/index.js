@@ -3,13 +3,13 @@ import { useHistory } from "react-router-dom";
 
 import style from "./style.module.scss";
 import Table from "../../components/Table";
+import Finance from "../../assets/Finance.svg";
+import Alinhamento from "../../components/Alinhamento";
 import { TransactionContext } from "../../contexts/TransactionsContext";
 
-import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 import ArrowUpwardOutlinedIcon from "@material-ui/icons/ArrowUpwardOutlined";
 import AttachMoneyOutlinedIcon from "@material-ui/icons/AttachMoneyOutlined";
 import ArrowDownwardOutlinedIcon from "@material-ui/icons/ArrowDownwardOutlined";
-import MonetizationOnOutlinedIcon from "@material-ui/icons/MonetizationOnOutlined";
 
 const Home = () => {
   const history = useHistory();
@@ -41,58 +41,60 @@ const Home = () => {
   return (
     <section className={style.sectionHome}>
       <div className={style.Cabecalho}>
-        <div className={style.divGofinances}>
-          <div className={style.span1}>
-            <MonetizationOnOutlinedIcon className={style.iconMoedas} />
-            gofinances
-          </div>
-          <div>
-            <ArrowUpwardIcon
-              className={style.buttonImportar}
-              onClick={Importar}
-            />
-          </div>
-        </div>
-        <div className={style.sectionDivOneCards}>
-          <div className={style.cards}>
-            <div className={style.cardsL1}>
-              <span>Entradas</span>
-              <ArrowUpwardOutlinedIcon className={style.iconEntrada} />
+        <Alinhamento>
+          <div className={style.divGofinances}>
+            <div className={style.span1}>
+              <img src={Finance} />
+              gofinances
             </div>
-            <div className={style.cardsL2}>
-              {new Intl.NumberFormat("pt-BR", {
-                style: "currency",
-                currency: "BRL",
-              }).format(summary.deposito)}
+            <div>
+              <span className={style.spanImportar}>Listagem</span>
+              <span className={style.spanListagem} onClick={Importar}>
+                Importar
+              </span>
             </div>
           </div>
+          <div className={style.sectionDivOneCards}>
+            <div className={style.cards}>
+              <div className={style.cardsL1}>
+                <span>Entradas</span>
+                <ArrowUpwardOutlinedIcon className={style.iconEntrada} />
+              </div>
+              <div className={style.cardsL2}>
+                {new Intl.NumberFormat("pt-BR", {
+                  style: "currency",
+                  currency: "BRL",
+                }).format(summary.deposito)}
+              </div>
+            </div>
 
-          <div className={style.cards}>
-            <div className={style.cardsL1}>
-              <span>Saidas</span>
-              <ArrowDownwardOutlinedIcon className={style.iconSaida} />
+            <div className={style.cards}>
+              <div className={style.cardsL1}>
+                <span>Saidas</span>
+                <ArrowDownwardOutlinedIcon className={style.iconSaida} />
+              </div>
+              <div className={style.cardsL2}>
+                {new Intl.NumberFormat("pt-BR", {
+                  style: "currency",
+                  currency: "BRL",
+                }).format(summary.saida)}
+              </div>
             </div>
-            <div className={style.cardsL2}>
-              {new Intl.NumberFormat("pt-BR", {
-                style: "currency",
-                currency: "BRL",
-              }).format(summary.saida)}
-            </div>
-          </div>
 
-          <div className={style.cardOrange}>
-            <div className={style.cardsL1}>
-              <span>Total</span>
-              <AttachMoneyOutlinedIcon className={style.money} />
-            </div>
-            <div className={style.cardsL2}>
-              {new Intl.NumberFormat("pt-BR", {
-                style: "currency",
-                currency: "BRL",
-              }).format(summary.total)}
+            <div className={style.cardOrange}>
+              <div className={style.cardsL1}>
+                <span>Total</span>
+                <AttachMoneyOutlinedIcon className={style.money} />
+              </div>
+              <div className={style.cardsL2}>
+                {new Intl.NumberFormat("pt-BR", {
+                  style: "currency",
+                  currency: "BRL",
+                }).format(summary.total)}
+              </div>
             </div>
           </div>
-        </div>
+        </Alinhamento>
       </div>
       <div className={style.sectionDivTwo}>
         <Table />

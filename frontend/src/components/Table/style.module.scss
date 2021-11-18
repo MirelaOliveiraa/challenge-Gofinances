@@ -4,7 +4,7 @@
     justify-content: center;
     
     .sectionTable{
-        width: 70%;
+        width: 100%;
         
         margin: 0 auto;
         text-align: left;
@@ -24,7 +24,7 @@
                 align-items: center;        
             }
             
-            .tableTd, .colorEntrada, .colorSaida, .colorGray{
+            .tableTd, .colorEntrada, .colorSaida, .colorGray, .style-text{
                 padding: 0.5rem;
                 
                 font-size: 15px;
@@ -42,6 +42,10 @@
             }
             .colorGray{
                 color: var(--color-darkgray);
+            }
+
+            td:first-child{
+                color: var(--color-black) !important;
             }
         }
     }
