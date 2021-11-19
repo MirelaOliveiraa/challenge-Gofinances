@@ -6,7 +6,6 @@ import style from "./style.module.scss";
 import Finance from "../../assets/Finance.svg";
 
 import ReportProblemOutlinedIcon from "@material-ui/icons/ReportProblemOutlined";
-import MonetizationOnOutlinedIcon from "@material-ui/icons/MonetizationOnOutlined";
 import PictureInPictureAltOutlinedIcon from "@material-ui/icons/PictureInPictureAltOutlined";
 
 const Importar = () => {
